@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactZero</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+
+    <script src="libs/react.js"></script>
+    <script src="libs/react-dom.js"></script>
+
+    <script>
+        ReactDOM.render(
+            React.createElement(
+                "table", 
+                {
+                    id: "table",
+                    style: {
+                        border: "2px solid"
+                    }
+                },
+                React.createElement(
+                    "thead",
+                    null,
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement(
+                            "th",
+                            null,
+                            "Nome"
+                        ),
+                        React.createElement(
+                            "th",
+                            null,
+                            "Sobrenome"
+                        )
+                    ),
+                ),
+                React.createElement(
+                    "tbody",
+                    null,
+                    React.createElement(
+                        "td",
+                        null,
+                        "Wesley"
+                    ),
+                    React.createElement(
+                        "td",
+                        null,
+                        "Morais"
+                    ) 
+                )
+            ),
+            document.getElementById("app")
+        )
+    </script>
+</body>
+</html>
