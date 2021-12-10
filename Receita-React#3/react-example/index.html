@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>ReceitaReact - 3</title>    
+      <style>
+          
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #containerTabela{
+            margin-left: 30px;
+            font-size: 18px;
+        }
+
+        #tabela thead th{
+            border-bottom: 1px solid gray;
+            font-size: 18px;
+        }
+
+
+
+      </style>  
+   </head>
+   <body>      
+        <div id="app"></div>
+
+        <script src="libs/react.js"></script>
+        <script src="libs/react-dom.js"></script>
+        <script src="libs/babel.js"></script>
+        <script type="text/babel" src="src/TabelaBebidas.js"></script>
+        <script type="text/babel">        
+
+            const valoresCabecalho = ["Nome", "Marca","Teor alcoólico","Ações"];
+            const conteudo = [
+                {nome:"Havana", marca:"Engenho Anísio Santiago", teor_alcoolico:"40%"},
+                {nome:"Coca-cola", marca:"Coca-cola", teor_alcoolico:"0%"},
+                {nome:"Guaraná", marca:"Coca-cola", teor_alcoolico:"0%"},
+                {nome:"Brahma", marca:"Brahma", teor_alcoolico:"70%"},
+                
+            ]
+
+            ReactDOM.render(
+                <TabelaBebidas 
+                    titulo="Tabela de Bebidas Favoritas" 
+                    cabecalhos={valoresCabecalho}
+                    conteudo={conteudo} />,
+                document.getElementById("app")
+            )
+      </script>
+   </body>
+</html>
