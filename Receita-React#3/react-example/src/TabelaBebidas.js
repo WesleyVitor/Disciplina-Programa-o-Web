@@ -5,16 +5,20 @@ const TabelaBebidas = ({titulo, cabecalhos, conteudo}) => {
         );
     });
 
-    const conteudo_formatado = conteudo.map(({nome, marca,teor_alcoolico},index)=>{
+    const conteudo_formatado = conteudo.map((obj,index)=>{
         return(
-            <tr>
-                <td>{nome}</td>
-                <td>{marca}</td>
-                <td>{teor_alcoolico}</td>
-                <td>
-                    <button>Editar</button>
-                    <button>Deletar</button>
-                </td>
+            <tr key={index}>
+                {
+                    Object.values(obj).map((atributo,index)=>{
+                        return(
+                            <td key={index}>{atributo}</td>
+                        );
+                    })
+                }
+                <td><button>Editar</button></td>
+                <td><button>Deletar</button></td>
+                
+                
             </tr>
         );
     })
